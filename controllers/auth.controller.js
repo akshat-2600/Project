@@ -56,7 +56,7 @@ exports.signin = async (req , res)=>{
     const user = await user_model.findOne({userId : req.body.userId})
     if(user === null){
         return res.status(400).send({
-            message : "User id is not a valid user id"
+            message : "User id passed is not a valid user id"
         })
     }
     //Check if password is correct
